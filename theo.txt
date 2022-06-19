@@ -1,0 +1,2 @@
+ This is my first file created by a vi code editor as part of my demo to understanding git and it's basic operaions indepthly.
+ I will create a demo, dummy file to clear elaborate my point of view.
