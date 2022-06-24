@@ -1,0 +1,27 @@
+version: 2.1
+orbs:
+  welcome: circleci/welcome-orb@0.4.1
+jobs:
+  Print_hello:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo HELLO!!"
+  Print_World:
+    docker: 
+      - images: circleci/node:13.8.0
+    steps:
+      - run: 
+          name: "Say hello"
+          command: "echo WORLD!"   
+
+workflows:
+  say-hello-workflow:
+    jobs:
+      - Print_hello
+      - Print_World:
+          requires: 
+            - Print_hello
